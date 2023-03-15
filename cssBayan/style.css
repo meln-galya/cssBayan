@@ -1,0 +1,162 @@
+body {
+   font-size: 2rem;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.container {
+   padding:5vw;
+   margin: 0 auto;
+   max-width: 80%;
+   border: 0.1rem solid black;   
+   margin: 10vw auto;
+   background-color: rgb(252, 239, 223);
+}
+
+.accordion {
+   margin: 0 auto;
+}
+
+.mem-input {
+   appearance: none;
+   height: 0%;
+   width: 0%;
+   display: none;
+   
+}
+
+h1 {
+   font-size: 1.5rem;
+   text-align: center;
+   margin: 0;
+   color: rgb(48, 12, 12);
+}
+
+h2 {
+   text-align: left;
+   margin: 1vh 0;
+   font-size: 1rem;
+   color: rgb(48, 12, 12);
+}
+
+.mem-title {
+   display: flex;
+   justify-content: space-between;
+   border: 0.1rem solid #251010;
+   margin-bottom: 3vw;
+}
+
+.arrow {
+   max-width: 10%;
+}
+
+.img-wrapper {
+   max-width: 70%;
+   margin: 0 auto;
+   display: none;
+   transition: 0.3s;
+}
+
+.mem-img {
+   max-width: 100%; 
+   opacity: 0%;
+   transition: 0.5s;
+   
+}
+
+.mem-input:checked ~ .img-wrapper{
+   display: block;
+}
+
+.mem-input:checked ~ .img-wrapper>.mem-img {
+   opacity: 100%;
+   
+}
+
+.mem-input:checked ~ .mem-title h2 {
+   color:rgb(97, 94, 94)
+
+}
+
+
+@media (min-width: 500px) {
+   h1 {
+      font-size: 4.5vw;
+   }
+   h2 {
+      font-size: 3.5vw;
+   }
+   .arrow {
+      max-width: 7%;
+   }
+}
+
+@media (min-width: 900px) {
+   .container {
+      max-width: 60%;
+      margin: 1vw auto;
+   }
+
+   .arrow {
+      opacity: 0%;
+      transition: 0.3s;
+      width: 5%;
+   }
+   .img-wrapper {
+      max-width: 50%;
+   }
+
+   h1 {
+      font-size: 3vw;
+   }
+
+   h2 {
+      font-size: 2vw;
+   }
+
+   .mem-input:checked ~ .mem-title .arrow {
+      opacity: 100%;
+      transform: rotate(0.25turn)
+      
+   }
+
+   label {
+   cursor: pointer;
+} 
+
+   label:hover .img-wrapper {
+      display: block;
+   }
+
+   label:hover .img-wrapper>.mem-img {
+   opacity: 100%;
+   
+}
+label:hover .mem-title>.arrow {
+   opacity: 100%;
+   transform: rotate(0.25turn)
+   
+}
+
+.accordion:hover .mem-title>h2{
+   color:rgb(97, 94, 94)
+}
+
+.accordion:hover .mem-title>.arrow {
+   opacity: 100%;
+   
+}
+
+label:active .img-wrapper>.mem-img {
+   opacity: 60%;   
+}
+
+label:active .mem-title>h2 {
+   color:rgb(48, 12, 12);
+}
+
+}
+
+

@@ -97,6 +97,7 @@ h2 {
    .container {
       max-width: 70%;
       margin: 1vw auto;
+      
    }
 
    .arrow {
@@ -123,7 +124,19 @@ h2 {
    opacity: 100%;
    
 }
+label:hover .mem-title>.arrow {
+   opacity: 100%;
+   
+}
+
+.accordion:hover .mem-title>h2{
+   color:rgb(131, 94, 94)
+}
+
+.accordion:hover .mem-title>.arrow {
+   opacity: 100%;
+}
 }
 
 
- 
+ @media (min-width: )
